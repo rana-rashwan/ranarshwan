@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ahmed-suliman-dev.github.io/rana/sitemap.xml
+Sitemap: https://rana-rashwan.github.io/ranarshwan/sitemap.xml
