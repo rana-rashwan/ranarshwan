@@ -44,20 +44,20 @@ applyConfig();
 /* ---------- 2) القائمة في الجوال ---------- */
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("mainNav");
-toggle.addEventListener("click", () => {
+if (toggle && nav) toggle.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open);
 });
-nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+if (nav) nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
 
 /* ---------- 3) تمييز الرابط النشط أثناء التمرير ---------- */
-const navLinks = [...nav.querySelectorAll("a")];
+const navLinks = nav ? [...nav.querySelectorAll("a")].filter(a => (a.getAttribute("href") || "").startsWith("#")) : [];
 const sections = navLinks.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
 window.addEventListener("scroll", () => {
   const y = window.scrollY + 120;
   let current = sections[0];
   sections.forEach(s => { if (s.offsetTop <= y) current = s; });
-  navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + current.id));
+  if (current) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + current.id));
   document.querySelector(".fab-top").classList.toggle("show", window.scrollY > 500);
 }, { passive: true });
 
