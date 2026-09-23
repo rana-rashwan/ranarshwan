@@ -131,11 +131,11 @@
 
     <ol class="timeline">
       <li><span class="t-year">1401هـ</span><h4>الأمر السامي 19851</h4><p>إنشاء المكافأة.</p></li>
-      <li><span class="t-year">1407هـ</span><h4>تعميم وزارة المالية</h4><p>وقف إداري للصرف.</p><a href="#" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><span class="t-year">1419هـ</span><h4>قرار مجلس الوزراء 163</h4><p>الإلغاء الفعلي.</p><a href="#" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><span class="t-year">1439هـ</span><h4>قرار مجلس الوزراء 473</h4><p>إقرار نظامية الصرف.</p><a href="#" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><span class="t-year">1440هـ</span><h4>تعميم وزارة التعليم</h4><p>التطبيق الإداري.</p><a href="#" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><span class="t-year">1446هـ</span><h4>الحكم القضائي النهائي</h4><p>إلزام بصرف المكافأة.</p><a href="#" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
+      <li><span class="t-year">1407هـ</span><h4>تعميم وزارة المالية</h4><p>وقف إداري للصرف.</p><a href="article.html?a=1407" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
+      <li><span class="t-year">1419هـ</span><h4>قرار مجلس الوزراء 163</h4><p>الإلغاء الفعلي.</p><a href="article.html?a=1419" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
+      <li><span class="t-year">1439هـ</span><h4>قرار مجلس الوزراء 473</h4><p>إقرار نظامية الصرف.</p><a href="article.html?a=1439" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
+      <li><span class="t-year">1440هـ</span><h4>تعميم وزارة التعليم</h4><p>التطبيق الإداري.</p><a href="article.html?a=1440" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
+      <li><span class="t-year">1446هـ</span><h4>الحكم القضائي النهائي</h4><p>إلزام بصرف المكافأة.</p><a href="article.html?a=verdicts" class="read-more">اقرأ التفاصيل <i class="fa-solid fa-arrow-left"></i></a></li>
     </ol>
   </div>
 </section>
@@ -194,7 +194,7 @@
 
     <div class="cards-3 method">
       <div class="m-card"><i class="fa-solid fa-scale-balanced"></i><h4>حكم إداري نهائي</h4><p>يُستأنس به في تقييم الحالات المماثلة.</p></div>
-      <div class="m-card"><i class="fa-solid fa-id-card"></i><h4>محامية مرخصة</h4><p>محامية مرخصة من وزارة العدل.</p></div>
+      <div class="m-card"><i class="fa-solid fa-id-card"></i><h4>محامية مرخصة</h4><p>محامية مرخصة من وزارة العدل<span data-item="license"> — ترخيص رقم <span data-field="license"></span></span>.</p></div>
       <div class="m-card"><i class="fa-solid fa-magnifying-glass"></i><h4>فحص دقيق</h4><p>لطلبات تقييم مكافأة الخريجين.</p></div>
     </div>
 
@@ -245,24 +245,16 @@
   </div>
 </section>
 
-<!-- ============ المقالات ============ -->
+<!-- ============ المدونة ============ -->
 <section class="section" id="blog">
-  <div class="container narrow">
+  <div class="container">
     <div class="section-head">
       <h2>آخر مقالاتنا القانونية</h2>
       <div class="divider"></div>
       <p>تثقيف قانوني مستمر حول قضايا مكافأة الخريجين والأنظمة الإدارية.</p>
     </div>
-
-    <ul class="posts">
-      <!-- بدّل الروابط # بروابط مقالاتك -->
-      <li><h4>مكافأة الخريجين 50 ألف — الدليل الشامل</h4><a href="#" class="read-more">قراءة المقال <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><h4>قرار مجلس الوزراء 473 لعام 1439هـ</h4><a href="#" class="read-more">قراءة المقال <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><h4>هل أغلق تعميم وزارة التعليم الملف عند 1407؟</h4><a href="#" class="read-more">قراءة المقال <i class="fa-solid fa-arrow-left"></i></a></li>
-      <li><h4>كيف أطالب بمكافأة الخريجين؟</h4><a href="#" class="read-more">قراءة المقال <i class="fa-solid fa-arrow-left"></i></a></li>
-    </ul>
-
-    <div class="center"><a href="#" class="btn btn-outline-gold"><i class="fa-solid fa-book-open"></i> عرض جميع المقالات</a></div>
+    <div class="post-grid" id="latestPosts"></div>
+    <div class="center"><a href="blog.html" class="btn btn-outline-gold"><i class="fa-solid fa-layer-group"></i> عرض جميع المقالات</a></div>
   </div>
 </section>
 
@@ -337,7 +329,6 @@
   </div>
 
   <div class="ck-body">
-    <!-- شاشة البداية -->
     <div class="ck-screen" id="ckIntro">
       <div class="ck-badge"><i class="fa-solid fa-file-lines"></i></div>
       <h4>هل تقع حالتك ضمن معايير الفحص الأولي لمكافأة الخريجين؟</h4>
@@ -355,7 +346,6 @@
       </div>
     </div>
 
-    <!-- الأسئلة الشائعة داخل الأداة -->
     <div class="ck-screen" id="ckHelp" hidden>
       <h4>أسئلة شائعة</h4>
       <ul class="ck-list">
@@ -367,7 +357,6 @@
       <button class="btn btn-gold btn-block" id="ckBackIntro">رجوع</button>
     </div>
 
-    <!-- الأسئلة -->
     <div class="ck-screen" id="ckQuiz" hidden>
       <div class="ck-progress"><span id="ckBar"></span></div>
       <p class="ck-step" id="ckStep"></p>
@@ -377,7 +366,6 @@
       <button class="link-btn" id="ckBack"><i class="fa-solid fa-arrow-right"></i> السؤال السابق</button>
     </div>
 
-    <!-- النتيجة -->
     <div class="ck-screen" id="ckResult" hidden>
       <div class="ck-result-icon" id="ckResIcon"></div>
       <h4 id="ckResTitle"></h4>
@@ -390,6 +378,7 @@
   </div>
 </dialog>
 
+<script src="articles.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
