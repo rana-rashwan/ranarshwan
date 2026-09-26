@@ -11,7 +11,7 @@ const CONFIG = {
   license: "46118"              // رقم الترخيص
 };
 
-const WA_DEFAULT_TEXT = "السلام عليكم، أرغب بتقييم أولي لحالتي في مكافأة الخريجين.";
+const WA_DEFAULT_TEXT = "السلام عليكم و رحمة الله و بركاته أرغب بتقييم أولي في (موضوع القضية).";
 
 function waLink(text) {
   if (!CONFIG.whatsapp) return "#";
@@ -165,7 +165,7 @@ function showResult() {
 
   // نص واتساب فيه ملخص النتيجة (يرسله المستخدم بنفسه)
   const summary = QUESTIONS.map((it, i) => `- ${it.label}: ${ANSWERS_LABEL[answers[i]]}`).join("\n");
-  const msg = `السلام عليكم، أجريت الفحص الأولي لمكافأة الخريجين.\nالنتيجة: ${title}\n${summary}`;
+  const msg = `السلام عليكم و رحمة الله و بركاته أجريت الفحص الأولي لمكافأة الخريجين.\nالنتيجة: ${title}\n${summary}`;
   const wa = $("ckResWa");
   wa.href = waLink(msg);
   if (CONFIG.whatsapp) { wa.target = "_blank"; wa.rel = "noopener"; }
